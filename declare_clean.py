@@ -1,4 +1,3 @@
-from random import random
 from selenium import webdriver
 
 options = webdriver.ChromeOptions() 
@@ -17,7 +16,7 @@ pw = 'yourpassword' #edit
 userfield.send_keys(user)
 passfield.send_keys(pw)
 driver.find_element_by_id("submitButton").click()
-temp = str(round(36 + random(),1))
+temp = 36.1 #insert temp to be inputted here
 driver.find_element_by_xpath('//*[@id="submitDisable"]/tbody/tr[4]/td[2]/table/tbody/tr/td/table/tbody/tr[3]/td[3]/input[1]').click()
 driver.find_element_by_xpath('//*[@id="submitDisable"]/tbody/tr[4]/td[2]/table/tbody/tr/td/table/tbody/tr[4]/td[3]/input[1]').click()
 driver.find_element_by_id('temperature').send_keys(temp)
